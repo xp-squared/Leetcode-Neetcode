@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
 
     print("\n")
-    print("Solution 2: ...")
+    print("Solution 2: Using hash set")
     print("Is there a duplicate in any of these lists?")
     nums3 = [6,7,8,9,10]  # No duplicates
     nums4 = [88, 92, 33, 44, 41, 59, 44, 100, 2100]  # Duplicate 44
