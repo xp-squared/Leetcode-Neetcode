@@ -45,6 +45,8 @@ class BruteForceSolution:
         # lets us insert elements into hash set in O(1) time
         # we check if the element being added is duplicate, if not add it, if is return true
         # all operations are O(1) but had to go through the list, so running time is O(N)
+        # IMPOORTANT NOTE: hash sets only store unique values, so if you have a string an it has multiple of the same letter it will only store that letter once
+
         hashset = set() # creating the hashset we will insert into
         for n in nums:
             if n in hashset: # check if it is in there first to check for duplicates before adding
