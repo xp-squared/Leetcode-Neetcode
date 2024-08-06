@@ -1,4 +1,8 @@
 '''
+Practice Counter: 
+Sol 1: 1
+Sol 2: 1
+
 Is Anagram
 Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
 
@@ -54,6 +58,7 @@ class Solution:
             # s[i] is the key
             # we want to increment the count of the characters we see
             # we use the get function to get the key, if the key does not exist in the hashmap the default value returned is 0
+
             countS[s[i]] = 1 + countS.get(s[i], 0)
             countT[t[i]] = 1 + countT.get(t[i], 0)
         return countS == countT
