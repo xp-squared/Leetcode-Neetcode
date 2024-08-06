@@ -17,7 +17,7 @@ within the array. There are multiple solution for this, the ones I have explored
 
 from typing import List
 
-class BruteForceSolution:
+class Solution:
     def hasDuplicate1(self, nums: List[int]) -> bool:
         # Brute force solution with O(n^2) time complexity
         # We use one nested loop and one outer loop
@@ -58,7 +58,7 @@ class BruteForceSolution:
 if __name__ == "__main__":
     print("\nSolution 1: Using brute force.")
     print("Is there a duplicate in any of these lists?")
-    solution = BruteForceSolution()
+    solution = Solution()
     nums1 = [1, 2, 3, 4, 5]  # No duplicates
     nums2 = [3, 7, 9, 11, 22, 33, 77, 7]  # Duplicate 7
     nums1Solution = solution.hasDuplicate1(nums1)
