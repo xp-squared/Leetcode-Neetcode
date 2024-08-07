@@ -1,7 +1,7 @@
 '''
 Practice Counter: 
-Sol 1:
-Sol 2:
+Sol 1: 
+Sol 2: 1
 
 Two Integer Sum
 Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.
@@ -55,6 +55,8 @@ class Solution:
         # memory: O(N), we could potentially add every value to hashmap
         
         prevMap = {} # val : index 
+        
+
         # starts a loop that iterates over the list nums with both the 
         # index (i) and the number (n). The enumerate function is used to 
         # keep track of both the index and the value.
