@@ -35,6 +35,7 @@ Constraints:
 '''
 
 class Solution:
+    # everything has running time of O(1)
     def isValid(self, s: str) -> bool:
         # This is a stack problem, we are returning a boolean.
         # Stack is LIFO (Last In, First Out).
