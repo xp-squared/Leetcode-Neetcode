@@ -1,8 +1,8 @@
 '''
 Practice Counter: 
 Sol 1: 1
-Sol 2: 1
-Sol 3: 1
+Sol 2: 2
+Sol 3: 2
 
 Duplicate Integer
 Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
