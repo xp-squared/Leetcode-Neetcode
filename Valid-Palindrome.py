@@ -1,4 +1,7 @@
 '''
+Practice Counter:
+Sol2: 1
+
 Is Palindrome
 Given a string s, return true if it is a palindrome, otherwise return false.
 
