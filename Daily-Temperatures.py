@@ -24,17 +24,18 @@ Constraints:
 from typing import List
 
 class Solution:
+    # time complexity o(n)
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         # for the ith day, we want to find how many days it took for there to be a greater temperature
         # we use stack and append the day difference to the output list
         res = [0] * len(temperatures) # result array with length of temperatures and is filled with 0's, good for if a result is 0 so no case to handle that
         stack = [] # pair: [temp, index]
 
-        for idx, temp in enumerate(temperatures): # getting the index and the value at the same time
-            while stack and temp > stack[-1][0]: # temp > top of our stack and temperature of it which is the first value so 0, as well while stack is not empty
+        for currentIdx, currentTemp in enumerate(temperatures): # getting the index and the value at the same time
+            while stack and currentTemp > stack[-1][0]: # temp > top of our stack and temperature of it which is the first value so 0, as well while stack is not empty
                 stackT, stackInd = stack.pop() # getting the temp and the index, pop always returns the value
-                res[stackInd] = idx - stackInd # getting the difference between the current day (idx) and popped day
-            stack.append((temp, idx)) # append the current day
+                res[stackInd] = currentIdx - stackInd # getting the difference between the current day (idx) and popped day
+            stack.append((currentTemp, currentIdx)) # append the current day
         return res
 
 
