@@ -57,7 +57,6 @@ if __name__ == "__main__":
     heights1 = [1, 8, 6, 2, 5, 4, 8, 3, 7]
     print(solution.maxArea(heights1))  # Output: 49
 
-   
     heights2 = [1, 1]
     print(solution.maxArea(heights2))  # Output: 1
 
