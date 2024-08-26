@@ -1,4 +1,7 @@
 '''
+Practice Counter: 2
+
+
 Binary Search
 You are given an array of distinct integers nums, sorted in ascending order, and an integer target.
 
