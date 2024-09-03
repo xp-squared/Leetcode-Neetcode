@@ -1,6 +1,6 @@
 '''
 LinkedList Problem
-Practice Counter:
+Practice Counter: 1
 
 Merge Two Sorted Linked Lists
 You are given the heads of two sorted linked lists list1 and list2.
