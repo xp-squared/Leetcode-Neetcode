@@ -25,3 +25,43 @@ Output: -1
 
 
 '''
+
+from typing import List
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        # return the index of the target
+        # Example: [3,4,5,6,1,2], target = 1, the index of target is 4
+        # solution runs in O(log n) time using binary search
+
+        l = 0
+        r = len(nums) - 1
+
+        while l <= r: 
+            mid = (l + r) // 2  # getting middle of array
+            if nums[mid] == target:  # if middle equals the target, we can return it
+                return mid
+
+            # We're in the left sorted portion
+            if nums[l] <= nums[mid]: 
+                if target > nums[mid] or target < nums[l]:
+                    l = mid + 1  # move to the right side
+                else:
+                    r = mid - 1  # move to the left side
+            
+            # We're in the right sorted portion
+            else:
+                if target < nums[mid] or target > nums[r]:
+                    r = mid - 1  # move to the left side
+                else:
+                    l = mid + 1  # move to the right side
+
+        return -1  # if target is not found
+
+if __name__ == "__main__":
+    solution = Solution()
+
+    print(solution.search([4, 5, 6, 7, 0, 1, 2], 0))  # Output: 4
+    print(solution.search([4, 5, 6, 7, 0, 1, 2], 3))  # Output: -1
+    print(solution.search([1], 0))  # Output: -1
+    print(solution.search([1, 3], 3))  # Output: 1
