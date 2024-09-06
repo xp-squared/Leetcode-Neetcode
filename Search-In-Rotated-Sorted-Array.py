@@ -44,14 +44,14 @@ class Solution:
 
             # We're in the left sorted portion
             if nums[l] <= nums[mid]: 
-                if target > nums[mid] or target < nums[l]:
+                if target > nums[mid] or target < nums[l]: # if target is greater than mid, we have to move the left pointer up to search, if the target is less than the left most index, we know it might be on the other side since it is a rotating array
                     l = mid + 1  # move to the right side
                 else:
                     r = mid - 1  # move to the left side
             
             # We're in the right sorted portion
-            else:
-                if target < nums[mid] or target > nums[r]:
+            else: 
+                if target < nums[mid] or target > nums[r]: #
                     r = mid - 1  # move to the left side
                 else:
                     l = mid + 1  # move to the right side
