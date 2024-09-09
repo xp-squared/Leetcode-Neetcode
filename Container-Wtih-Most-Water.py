@@ -1,5 +1,5 @@
 '''
-Practice counter: 1
+Practice counter: 2
 
 Two pointer problem
 
@@ -40,7 +40,9 @@ class Solution:
         # this is o(N) time complexity
         while l < r:
             # we get our max result of area from this, we compare our result with the minimum of heights, as if we chose the larger height water would spill, times the width of the section
-            result = max(result, min(heights[l], heights[r]) * (r - l))
+            # think of this line below as width * height, width of the distance from each other, times the minimum height so water does not spill
+            area = (r - l ) * min(heights[l],heights[r])
+            res = max(res, area)
 
             # if height at left is less than height at right, we increment our left pointer and want to maximize the height
             if heights[l] < heights[r]:
