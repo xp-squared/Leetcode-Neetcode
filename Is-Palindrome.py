@@ -26,8 +26,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 
 class Solution:
-    def isPalindrome(self, x: int) -> bool:
-
+    def isPalindrome_string(self, x: int) -> bool:
         # O(N) runtime
         # converting the number to a string
         string = str(x)
@@ -42,12 +41,37 @@ class Solution:
                 return False
         return True
 
+    def isPalindrome_no_string(self, x: int) -> bool:
+        # without converting to a string
+        if x < 0:
+            return False
+        # we want to reverse the number and compare it to the original number
+        reverse = 0
+        temp = x  # temp will be the same number as x
 
+        while temp != 0:
+            digit = temp % 10
+            reverse = reverse * 10 + digit
+            temp //= 10
+            # What is happening is we are cutting each end digit and reversing it
+            # By creating x backwards, we can directly compare if it will be a palindrome
+
+        return reverse == x
+
+
+# Example of how to use the class with multiple test cases
 if __name__ == "__main__":
     sol = Solution()
 
+    # Test cases
     test_cases = [121, -121, 10, 12321, 98789]
 
+    print("Using string conversion method:")
     for test_value in test_cases:
-        result = sol.isPalindrome(test_value)
+        result = sol.isPalindrome_string(test_value)
+        print(f"Is {test_value} a palindrome? {result}")
+
+    print("\nUsing no string conversion method:")
+    for test_value in test_cases:
+        result = sol.isPalindrome_no_string(test_value)
         print(f"Is {test_value} a palindrome? {result}")
